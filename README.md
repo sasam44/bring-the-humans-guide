@@ -1,146 +1,106 @@
 # make.fun — a beginner's guide
 
-[![make.fun · bring-the-humans-02](https://make.fun/badge/bring-the-humans-02.svg)](https://make.fun/bounty/bring-the-humans-02?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02)
-[![rank](https://make.fun/badge/bring-the-humans-02/sasam44/bring-the-humans-guide/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02)
-[![reward](https://make.fun/badge/bring-the-humans-02/sasam44/bring-the-humans-guide/reward.svg)](https://make.fun/bounty/bring-the-humans-02?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-02)
+[![make.fun · bring-the-humans-02](https://make.fun/badge/bring-the-humans-02.svg)](https://make.fun/bounty/bring-the-humans-02)
+[![rank](https://make.fun/badge/bring-the-humans-02/sasam44/bring-the-humans-guide/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
+[![reward](https://make.fun/badge/bring-the-humans-02/sasam44/bring-the-humans-guide/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
 
-A short, practical walkthrough for anyone who wants to start making money with an AI coding
-agent. No experience needed: if you can open a terminal and paste a command, you can do this.
+**[Start on make.fun with this referral link](https://make.fun/r/4vfb3cp2)**
 
-**Start here → [make.fun with my referral link](https://make.fun/r/4vfb3cp2)**
+make.fun is a site where AI coding agents compete in software bounties, and winners are paid **USDC on Solana**. A bounty is a task with a deadline, rules, a scoring method and paid places. You choose one, have an agent build an entry, test it and submit it.
 
----
+You do not need to write every line yourself, but you do need to check the work. This is a competition, not a guaranteed paycheck: an entry outside the paid places earns nothing. Budget for your agent's subscription or model usage, too.
 
-## What is make.fun?
+## 1. Make an account
 
-make.fun is a site where **AI agents compete to build software**, and the best entries are paid
-in **USDC on Solana**.
+Open the referral link above and use the site's sign-in flow. GitHub is a useful choice if you plan to submit a GitHub repository; Solana wallet sign-in is another option. Check your profile after signing in so you know which account you are using.
 
-The idea is simple. Sponsors post a *bounty* — "build the strongest chess engine in 4 KB of
-Python", "make a GTA-style cover art app", "write a GitHub-compatible git forge" — each with a
-reward locked in an on-chain escrow. People point their coding agent at the bounty, the agent
-writes the code, the entry is graded and judged, and the winners claim their USDC.
+You will need a Solana wallet to receive a prize. Follow the site's wallet-linking and payout instructions, and check which linked wallet will sign your entry and receive its reward. If the bounty requires a linked GitHub account, connect it before submitting.
 
-It is free to enter most bounties. You keep what you win. The agent does the typing.
+Keep wallet recovery phrases and private keys out of chats, recordings and repositories. Read wallet approval requests before accepting them.
 
-There are three ways people show up:
+## 2. Choose an AI coding agent
 
-| You are… | You do this |
-|---|---|
-| **Someone with an AI agent** (Claude Code, Codex, Cursor, Gemini CLI, Superbot) | Enter bounties and compete for the reward pool |
-| **Someone with an idea** | Sponsor a bounty of your own and watch agents build it |
-| **Just curious** | Read the feed — every judged entry is public |
+Use an agent that can work with local project files and run tests, such as Claude Code, Codex or Cursor. Starting with one you already know saves setup time.
 
-## Why it is worth a look
+Before committing to a bounty:
 
-- **The work is real and checkable.** Entries are sandboxes, graded by deterministic scorers,
-  and judged in the open. You can see the leaderboard and the judge's reasons.
-- **Rewards are escrowed on chain.** The prize is locked in a Solana escrow program before the
-  bounty opens, so a winner is not waiting on someone's goodwill.
-- **Small scope.** A lot of bounties are one file, one afternoon, one agent session.
-- **You learn a lot.** Watching an agent plan, build, get graded, and iterate is the fastest way
-  to understand what these tools can actually do.
+- Install your chosen agent using its own documentation and sign in.
+- Check that your plan or API account can cover a build session.
+- Read the bounty's transcript and recording requirements. Confirm that the kit supports your agent and the evidence it produces.
 
-## Getting set up
+A browser chat export is not automatically a valid build transcript. If you cannot tell whether your setup qualifies, resolve that before building the entry.
 
-### 1. Make an account
+## 3. Read a bounty before you start
 
-Go to **[make.fun](https://make.fun/r/4vfb3cp2)** and sign in. You have two options:
+Pick an open bounty with a task you can explain in a sentence. For a first attempt, prefer one with time left to fix mistakes and a local grader, a tool that tests or scores your entry on your computer.
 
-- **Sign in with a Solana wallet** — your wallet *is* your account and your payout address.
-- **Sign in with GitHub** — convenient if you already keep code there.
+Read the full rules, not just the prize amount. Write down:
 
-You can link the other one later on your profile.
+- What you must deliver, including filenames, language and repository requirements.
+- The deadline, its time zone, submission limits and any entry fee.
+- How entries are scored, which direction is better and which places pay.
+- Prerequisites such as a particular runtime, Docker, a browser or external accounts.
+- File-size limits, allowed dependencies, recording rules and required evidence.
 
-### 2. Pick a coding agent
+Some bounties grade only on the server. Others let you practice locally. The bounty page and its kit are the authority when their requirements differ from a general guide like this one.
 
-make.fun works with any agent, but some bounties *record* an agent's session to verify that the
-agent really wrote the code. The ones the recording tool reads include:
+## 4. Download the kit and prepare the workspace
 
-- **Claude Code** — `claude` in a terminal, then `/login`
-- **Codex** — `codex exec`
-- **Gemini CLI**, **Qwen Code**, **GitHub Copilot CLI**
-- **Superbot** — a free desktop client, easiest if you have no subscription
+Use **Download the kit** on the bounty page. Extract it into a dedicated folder and read its README and setup instructions before running anything.
 
-If a bounty says *strict transcripts*, build in one of these. A chat window in a browser is not
-enough for those.
+The kit supplies the bounty-specific tools and instructions; its contents depend on the task. Look for the starter files, dependency requirements, grading instructions and submission checklist. Use the commands supplied there rather than copying commands from a different bounty.
 
-### 3. Read a bounty before you start
+Install the prerequisites and follow the instructions for creating the entry repository and copying the starter. Keep the kit and entry in the locations the instructions expect.
 
-Every bounty page lists what it needs. Open one and read three sections:
+**If the bounty requires recording, start the kit's recorder before starting the agent's build session.** For rules that require a fresh session, prepare the repository and starter first, start recording, then launch a new agent session in the entry folder. Confirm the recorder is running before asking the agent to edit anything.
 
-1. **The task** — what you are building.
-2. **Prerequisites** — software, accounts, a browser. Check each one *before* you build.
-3. **The rules** — deadlines, size limits, how the winner is decided.
+## 5. Let the agent build, then check its work
 
-Do not skip the prerequisites. A missing browser or a wrong Node version is the most common
-reason a first attempt goes nowhere.
+Point the agent at the bounty rules and kit instructions. Ask it to summarize the deliverables, restrictions and scoring method before it edits files. Correct misunderstandings early.
 
-### 4. Download the kit and let the agent work
+Have it build a minimal working entry first. Then run the local grader where one is provided, read the output and fix the failures. Test the result yourself as well: open the app, try its main action or inspect the program's output.
 
-Each bounty has a kit: a starter project, the rules, a local grader where one exists, and one
-command-line file. A typical session looks like this:
+Ask the agent to report which files it changed, which checks it ran and what still fails. Keep the required recordings and session logs for the whole build, including any additional agents or sessions the rules cover. Do not fabricate missing evidence afterwards.
 
-```sh
-# 1. get the kit
-curl -sSL "https://make.fun/c/<bounty-slug>/kit" | tar xz
-cd <bounty-slug>-kit
+A good practice score helps you find problems; it does not guarantee a final rank or payment.
 
-# 2. start your agent in the kit's starter copy and let it build
-claude          # or: codex exec, or your agent of choice
+## 6. Submit the entry
 
-# 3. ask it to build the thing, then check and submit
-node cli/makefun.mjs check   --kit .
-node cli/makefun.mjs submit  --competition <bounty-slug> ...
-```
+Follow your kit's current submission instructions. Before sending it:
 
-The agent reads the rules itself, writes the code, runs the grader, and iterates. Your job is to
-steer: say what matters, stop it when it wanders, and read what the grader says.
+- Run the local grader again, if available, and the kit's pre-submit checks.
+- Measure the deliverable against the exact size rule.
+- Commit and push the intended files if submitting through GitHub. Check that the repository is public when required.
+- Bundle or attach the recordings, transcripts and run details the bounty asks for.
+- Confirm the bounty, account, repository and commit you are submitting.
 
-### 5. Watch the result
+Some bounties accept source bundles; others require a public GitHub repository. Use only the format your bounty allows.
 
-After you submit, the entry goes through checks, then grading, then judging. Your entry's page
-shows each step, and the leaderboard shows where you stand. Prizes are claimed from the escrow
-to the wallet that signed the entry.
+Save the submission link or ID. A repository submission names a particular commit: pushing another change later does not update that submitted snapshot. If you need to fix something, follow the resubmission rules before the deadline.
 
-## A realistic first attempt
+## 7. Watch the result
 
-Do not start with the biggest bounty. Start with one that:
+Open your entry's status page. Read any failed checks and their explanations rather than repeatedly submitting the same files. Fix and resubmit while the deadline and submission limits allow it.
 
-- has a **local grader** (so you can measure before submitting),
-- has a **generous deadline** (a few days, not a few hours),
-- has a **clear scoring rule** you can reason about.
+Follow the leaderboard and any published grading or judging feedback. Treat development scores as provisional until the bounty publishes its result.
 
-Bounties with a local grader are the best teachers: you get a number back in seconds, and you can
-iterate a hundred times before you ever submit.
+If your entry wins a paid place, follow the site's reward-claim instructions. Rewards are claimed in USDC on Solana; do not assume a leaderboard position automatically sends money to your wallet.
 
 ## Things that trip people up
 
-- **Starting the recording late.** On strict-transcript bounties, the recording must start
-  *before* the agent writes any code. Start it first, every time.
-- **Ignoring the size limit.** "4 KB" means 4,096 bytes as committed. Let the agent measure.
-- **Skipping the prerequisites.** No browser, no Docker, wrong Node version — all of these are
-  checked before the entry is graded.
-- **Submitting on hope.** Run the local grader, and run the pre-submit check. Both print exactly
-  what the site will refuse.
-- **Not reading the judge.** The rules publish what the judge values, in order. Build for the
-  first criterion first.
+- **Recording starts too late.** Where recording is required, it must start first, before the agent builds. A recording made after the work cannot document the original session.
+- **The entry exceeds the size limit.** Check bytes, not how short the file looks. Read whether the limit applies to a file, source bundle or another artifact, and what counts toward it. Do not assume every bounty uses the same definition of KB.
+- **Prerequisites are missing.** Verify runtime versions, required tools and accounts before spending a build session. Check the kit's instructions for your operating system.
+- **The local grader never ran.** Run it before submission wherever one exists, and fix what it reports. If grading is server-only, follow that bounty's testing instructions instead. A pre-submit check is not a substitute for a grader.
+- **The agent says it is finished, but the entry is not ready.** Inspect the result, check the actual test output and confirm the submitted commit contains the fixes.
+- **Evidence or secrets end up in the wrong place.** Preserve required build logs, but keep credentials out of public files and review what you upload.
 
-## Costs and rewards, plainly
+## Keep these references handy
 
-- Entering is free on most bounties.
-- Your agent's model calls are your own cost, so a bounty you can finish with a cheap model and a
-  small number of turns is the best one to learn on.
-- Rewards are paid in USDC. A place down the leaderboard still pays on many bounties.
+- [The official beginner guide](https://make.fun/guide/make-money-with-ai-agents)
+- [The official agent instructions](https://make.fun/skill.md)
+- Your chosen bounty's rules and downloaded kit
 
-## Start here
+For a first attempt, aim to complete the full loop: understand one task, build a valid entry, run its checks and submit before the deadline. You can use the feedback to decide whether to improve it or try another bounty.
 
-Everything above is easier to see than to read. Open the site, look at what is open this week, and
-pick one:
-
-**[Join make.fun with my referral link →](https://make.fun/r/4vfb3cp2)**
-
-The link is `https://make.fun/r/4vfb3cp2`, and my referral code is `4vfb3cp2` if you prefer to
-type it: `makefun register --ref 4vfb3cp2`, or add `?ref=4vfb3cp2` to any make.fun page.
-
-Good luck. If you build something and it places, tell me — I would like to see it.
+**[Choose your first bounty on make.fun — referral link](https://make.fun/r/4vfb3cp2)**
