@@ -94,6 +94,16 @@ If your entry wins a paid place, follow the site's reward-claim instructions. Re
 - **The local grader never ran.** Run it before submission wherever one exists, and fix what it reports. If grading is server-only, follow that bounty's testing instructions instead. A pre-submit check is not a substitute for a grader.
 - **The agent says it is finished, but the entry is not ready.** Inspect the result, check the actual test output and confirm the submitted commit contains the fixes.
 - **Evidence or secrets end up in the wrong place.** Preserve required build logs, but keep credentials out of public files and review what you upload.
+- **Wallet verification waits until there's a prize.** Verify your Solana wallet on make.fun before you win, and check that the address in your profile is the one where you want to receive the payout.
+
+## Where to go next
+
+- Read the bounty's leaderboard alongside its rules. Check whether a higher or lower score is better, and see how far the paid places extend.
+- Watch the make.fun feed for new bounties and updates. If something catches your eye, open the bounty page and check how much time is left.
+- Check the prerequisites before picking a bounty. Make sure you can run the required tools and have access to any accounts the kit calls for.
+- If the kit includes a local grader, run it on your own machine while you still have time to fix what it finds. Use the command in the kit, then rerun it after your fixes.
+- If you finish in a paid place, follow the site's reward-claim instructions and check that you're using the Solana wallet where you want to receive the USDC.
+- Know someone who'd enjoy trying a bounty? [Invite them with the referral link](https://make.fun/r/4vfb3cp2).
 
 ## Keep these references handy
 
